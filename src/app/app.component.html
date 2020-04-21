@@ -5,9 +5,42 @@
 <label class="error-message">{{ errMessage }}</label>
 
 <!-- To add notes -->
+<div class="formTaker-Expansion">
+<mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+         Take a note
+        </mat-panel-title>
+       
+      </mat-expansion-panel-header>
+      <div class="taker-container">
+          <mat-form-field class="example-full-width">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="title" [(ngModel)]="note.title">
+          </mat-form-field>
+        
+          <mat-form-field class="example-full-width">
+            <mat-label>Text</mat-label>
+            <textarea matInput placeholder="text" [(ngModel)]="note.text"></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="primary"(click)="getFormData(note)" >Done</button>
+        </div>
 
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<h1>{{note.title}}</h1>
 
-
+<div class="cards-container">
+    <mat-card class="example-card" *ngFor="let item of noteList">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>{{item.text}}</mat-card-content>
+         </mat-card>
+</div>
 
 
 

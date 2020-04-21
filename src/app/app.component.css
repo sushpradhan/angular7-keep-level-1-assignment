@@ -1,0 +1,17 @@
+.formTaker-Expansion{
+    width: 50vw;
+    margin: 5vh auto;
+  }
+  .taker-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: row wrap;
+  }
+  mat-card{
+    margin: 1em;
+  }
