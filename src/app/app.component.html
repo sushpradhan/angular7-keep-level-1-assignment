@@ -17,12 +17,12 @@
       <div class="taker-container">
           <mat-form-field class="example-full-width">
             <mat-label>Title</mat-label>
-            <input matInput placeholder="title" [(ngModel)]="note.title">
+            <input matInput placeholder="title" name="title" [(ngModel)]="note.title">
           </mat-form-field>
         
           <mat-form-field class="example-full-width">
             <mat-label>Text</mat-label>
-            <textarea matInput placeholder="text" [(ngModel)]="note.text"></textarea>
+            <textarea matInput placeholder="text" name="text" [(ngModel)]="note.text"></textarea>
           </mat-form-field>
           <button mat-raised-button color="primary"(click)="getFormData(note)" >Done</button>
         </div>
